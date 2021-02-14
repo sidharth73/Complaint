@@ -1,0 +1,29 @@
+{% extends "online/header.html" %}
+
+{% block title %}
+Online FIR 
+{% endblock %}
+
+
+{% block body %}
+
+    <h1>ONLINE FIR</h1>
+    <form action="/registered" method="post">
+        {% csrf_token %}
+    <div class="form-group">
+    <label for="name">Name</label>
+    <input type="form-text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name" name="name">
+    </div>
+    <div class="form-group">
+    <label for="address">Address</label>
+    <input type="form-text" class="form-control" id="exampleInputPassword1" placeholder="Enter Full Address" name="address">
+    </div>
+    <div class="form-group">
+    <label for="comment">Complaint:</label>
+    <textarea class="form-control" rows="5" id="comment" name="complaint"></textarea>
+    </div>
+
+    <button type="submit" class="btn-grad">Submit</button>
+    </form>
+
+{% endblock %}
